@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio GitHub – pbuzdygan</title>
 
-  <!-- ✅ POPRAWKA: bezpośredni link do Font Awesome -->
-  <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-VzP4kY6gkJgRLm3pQXHvEQIR+GHoVyxGn0/XbC3q2oFeAH/BblufidDYf6e2LKOxBDZ6L/ay6T0D7o9R6n8m0A=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <!-- Ikony Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-VzP4kY6gkJgRLm3pQXHvEQIR+GHoVyxGn0/XbC3q2oFeAH/BblufidDYf6e2LKOxBDZ6L/ay6T0D7o9R6n8m0A=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
 
   <style>
     :root {
@@ -21,11 +19,14 @@
       --text-color: #e2e8f0;
       --accent: #38bdf8;
       --shadow: rgba(0, 0, 0, 0.4);
-      --fade-in: fadeIn 0.8s ease forwards;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
@@ -42,7 +43,7 @@
     header {
       text-align: center;
       padding: 40px 20px 10px;
-      animation: var(--fade-in);
+      animation: fadeIn 0.8s ease forwards;
     }
 
     .profile {
@@ -52,7 +53,7 @@
       text-align: center;
       gap: 12px;
       padding: 20px;
-      animation: var(--fade-in);
+      animation: fadeIn 0.8s ease forwards;
     }
 
     .profile img {
@@ -111,9 +112,7 @@
       backdrop-filter: blur(6px);
       transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s;
       opacity: 0;
-      animation: var(--fade-in);
-      animation-delay: 0.1s;
-      animation-fill-mode: forwards;
+      animation: fadeIn 0.8s ease forwards;
     }
 
     .repo:hover {
@@ -154,10 +153,17 @@
     /* --- Sekcja kontaktowa --- */
     .contact {
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       background: rgba(15, 23, 42, 0.7);
-      animation: var(--fade-in);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .contact.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .contact h2 {
@@ -167,14 +173,22 @@
 
     .contact p {
       color: #94a3b8;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .contact-links {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
       flex-wrap: wrap;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 1s ease, transform 0.6s ease;
+    }
+
+    .contact.visible .contact-links {
+      opacity: 1;
+      transform: scale(1);
     }
 
     .contact-links a {
@@ -188,6 +202,30 @@
       color: var(--accent);
       transform: scale(1.2);
       text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+    }
+
+    /* --- Scroll to top button --- */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--accent);
+      color: #0f172a;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+      display: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      z-index: 1000;
+    }
+
+    #scrollTopBtn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.8);
     }
 
     footer {
@@ -214,14 +252,14 @@
 
   <main id="repos">Ładowanie projektów...</main>
 
-  <section class="contact">
+  <section class="contact" id="contact">
     <h2>📬 Skontaktuj się ze mną</h2>
     <p>Znajdziesz mnie tutaj — chętnie porozmawiam o współpracy lub projektach open-source!</p>
     <div class="contact-links">
       <a href="mailto:pbuzdygan@gmail.com" title="E-mail"><i class="fas fa-envelope"></i></a>
       <a href="https://www.linkedin.com/in/pbuzdygan" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://pbuzdygan.github.io" target="_blank" title="Portfolio"><i class="fas fa-globe"></i></a>
       <a href="https://github.com/pbuzdygan" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://pbuzdygan.github.io" target="_blank" title="Portfolio"><i class="fas fa-globe"></i></a>
       <a href="https://pbuzdygan.github.io/cv.pdf" target="_blank" title="CV PDF"><i class="fas fa-file-pdf"></i></a>
     </div>
   </section>
@@ -230,12 +268,17 @@
     <p>© 2025 pbuzdygan • Stworzone z ❤️ i GitHub API</p>
   </footer>
 
+  <!-- Scroll to top button -->
+  <button id="scrollTopBtn" title="Wróć na górę"><i class="fas fa-arrow-up"></i></button>
+
   <script>
     const username = "pbuzdygan";
     const profileBio = document.getElementById("bio");
     const stats = document.getElementById("stats");
     const container = document.getElementById("repos");
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
 
+    // Dane profilu
     fetch(`https://api.github.com/users/${username}`)
       .then(res => res.json())
       .then(user => {
@@ -247,6 +290,7 @@
         `;
       });
 
+    // Repozytoria
     fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
       .then(res => res.json())
       .then(repos => {
@@ -266,6 +310,23 @@
           container.appendChild(card);
         });
       });
+
+    // Efekt fade-in sekcji kontaktowej
+    const contactSection = document.getElementById("contact");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          contactSection.classList.add("visible");
+        }
+      });
+    });
+    observer.observe(contactSection);
+
+    // Scroll to top button
+    window.addEventListener("scroll", () => {
+      scrollTopBtn.style.display = window.scrollY > 400 ? "block" : "none";
+    });
+    scrollTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
   </script>
 </body>
 </html>
