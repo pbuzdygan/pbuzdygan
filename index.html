@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio GitHub – pbuzdygan</title>
+
+  <!-- ✅ POPRAWKA: bezpośredni link do Font Awesome -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-VzP4kY6gkJgRLm3pQXHvEQIR+GHoVyxGn0/XbC3q2oFeAH/BblufidDYf6e2LKOxBDZ6L/ay6T0D7o9R6n8m0A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      --card-bg: rgba(30, 41, 59, 0.9);
+      --text-color: #e2e8f0;
+      --accent: #38bdf8;
+      --shadow: rgba(0, 0, 0, 0.4);
+      --fade-in: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+      animation: var(--fade-in);
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+      padding: 20px;
+      animation: var(--fade-in);
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+    }
+
+    .profile h1 {
+      font-size: 2rem;
+      color: var(--accent);
+      margin: 10px 0 5px;
+      text-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+    }
+
+    .profile p {
+      color: #94a3b8;
+      max-width: 600px;
+      line-height: 1.5;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    .stats div {
+      background: var(--card-bg);
+      padding: 10px 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+      width: 100%;
+    }
+
+    .repo {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 20px var(--shadow);
+      backdrop-filter: blur(6px);
+      transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s;
+      opacity: 0;
+      animation: var(--fade-in);
+      animation-delay: 0.1s;
+      animation-fill-mode: forwards;
+    }
+
+    .repo:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+    }
+
+    .repo h2 {
+      font-size: 1.3rem;
+      margin: 0 0 10px;
+    }
+
+    .repo a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .repo a:hover {
+      color: #7dd3fc;
+    }
+
+    .repo p {
+      color: #cbd5e1;
+      line-height: 1.5;
+      min-height: 60px;
+    }
+
+    .repo-footer {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* --- Sekcja kontaktowa --- */
+    .contact {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(15, 23, 42, 0.7);
+      animation: var(--fade-in);
+    }
+
+    .contact h2 {
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      color: #94a3b8;
+      margin-bottom: 20px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      color: var(--text-color);
+      font-size: 1.8rem;
+      text-decoration: none;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .contact-links a:hover {
+      color: var(--accent);
+      transform: scale(1.2);
+      text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="profile" id="profile">
+      <img src="https://github.com/pbuzdygan.png" alt="Avatar pbuzdygan" />
+      <h1>@pbuzdygan</h1>
+      <p id="bio">Ładowanie opisu profilu...</p>
+      <div class="stats" id="stats">
+        <div>👥 Obserwujący: —</div>
+        <div>📦 Repozytoria: —</div>
+        <div>🌟 Obserwowani: —</div>
+      </div>
+    </div>
+  </header>
+
+  <main id="repos">Ładowanie projektów...</main>
+
+  <section class="contact">
+    <h2>📬 Skontaktuj się ze mną</h2>
+    <p>Znajdziesz mnie tutaj — chętnie porozmawiam o współpracy lub projektach open-source!</p>
+    <div class="contact-links">
+      <a href="mailto:pbuzdygan@gmail.com" title="E-mail"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/pbuzdygan" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://pbuzdygan.github.io" target="_blank" title="Portfolio"><i class="fas fa-globe"></i></a>
+      <a href="https://github.com/pbuzdygan" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://pbuzdygan.github.io/cv.pdf" target="_blank" title="CV PDF"><i class="fas fa-file-pdf"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 pbuzdygan • Stworzone z ❤️ i GitHub API</p>
+  </footer>
+
+  <script>
+    const username = "pbuzdygan";
+    const profileBio = document.getElementById("bio");
+    const stats = document.getElementById("stats");
+    const container = document.getElementById("repos");
+
+    fetch(`https://api.github.com/users/${username}`)
+      .then(res => res.json())
+      .then(user => {
+        profileBio.textContent = user.bio || "Brak opisu w profilu.";
+        stats.innerHTML = `
+          <div>👥 Obserwujący: ${user.followers}</div>
+          <div>📦 Repozytoria: ${user.public_repos}</div>
+          <div>🌟 Obserwowani: ${user.following}</div>
+        `;
+      });
+
+    fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
+      .then(res => res.json())
+      .then(repos => {
+        container.innerHTML = "";
+        repos.forEach((repo, i) => {
+          const card = document.createElement("div");
+          card.className = "repo";
+          card.style.animationDelay = `${0.1 * (i + 1)}s`;
+          card.innerHTML = `
+            <h2><a href="${repo.html_url}" target="_blank">${repo.name}</a></h2>
+            <p>${repo.description || "Brak opisu projektu."}</p>
+            <div class="repo-footer">
+              <span>⭐ ${repo.stargazers_count}</span>
+              <span>${repo.language || "Nieznany język"}</span>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>
