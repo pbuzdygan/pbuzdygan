@@ -6,9 +6,9 @@
 
 # 👋 
 
-**Senior IT & OT Operations Analyst** — Bridging people, technology, and operations to build reliable, scalable infrastructure and operational excellence.
+In my professional life I`m IT Leader bridging people, technology, and operations to build sustainable business growth.
 
-I’m passionate about **self-hosting**, **homelab engineering**, and creating practical solutions that make technology more resilient — learned by building, breaking, and fixing. :contentReference[oaicite:1]{index=1}
+After work hours I’m passionate about **self-hosting**, **homelab engineering**, and creating practical solutions to make everyday life easier.
 
 ---
 
