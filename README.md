@@ -4,7 +4,7 @@
   Clean, professional, concise.
 -->
 
-# 👋 Hi, I’m Przemek Buzdygan
+# 👋 
 
 **Senior IT & OT Operations Analyst** — Bridging people, technology, and operations to build reliable, scalable infrastructure and operational excellence.
 
@@ -30,53 +30,6 @@ I’m passionate about **self-hosting**, **homelab engineering**, and creating p
 
 ---
 
-## 🧠 Tech + Skills
-
-### 📌 Infrastructure & Operations
-- **Self-hosting** & Homelab Architecture
-- **Infrastructure reliability**
-- Monitoring & Logging
-- Networking fundamentals
-
-### 🛠 Tools & Technologies
-- 🐳 Docker, Linux
-- ☁️ Virtualization & Containers
-- 🔧 Scripting (Bash, Python)
-- 📦 Automation tooling
-
-### 🧩 Soft Skills
-- People-centric leadership
-- Cross-team collaboration
-- Pragmatic delivery
-- Mentoring & coaching
-
----
-
-## 📈 Highlights
-
-- Built and maintained **homelab environments** from scratch to mature setups
-- Contributed to infrastructure automation and monitoring improvements
-- Advocate for practical solutions that **reduce operational risk**
-- Strong believer in “**build, break, fix, learn, repeat**” mindset
-
----
-
-## 📌 Featured Projects
-
-Below are a few repositories that show the range of my work — from self-hosted tools to infrastructure automation.
-
-<!-- Customize these with your actual repos + descriptions -->
-| Project | Description |
-|---------|-------------|
-| 🔧 **homelab-setup** | Scripts and configs for bootstrapping a reliable home infrastructure |
-| 🧪 **infra-automation** | Toolkit for automated deployments & monitoring |
-| 📊 **observability-stack** | Logging & metrics stack for small to medium environments |
-| 🔐 **secure-networking** | Secure network blueprints & utilities |
-
-*(Pin the actual repos on GitHub so they show up as cards below your profile and here in the table.)*
-
----
-
 ## 📬 Reach Out
 
 I’m always open to collaboration, community discussion, and new challenges.  
@@ -85,5 +38,5 @@ Let’s build something solid — with clarity and purpose.
 ---
 
 *Thanks for visiting!* 👨‍💻  
-© 2025 Przemek Buzdygan
+© 2025 Przemyslaw Buzdygan
 
