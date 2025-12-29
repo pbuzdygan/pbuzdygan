@@ -24,16 +24,9 @@ After work hours I’m passionate about **self-hosting**, **homelab engineering*
 ## 🔗 Connect with Me
 
 [![Website](https://img.shields.io/badge/Website-Portfolio-1E2A38?logo=github&style=flat&logoColor=white)](https://pbuzdygan.github.io)  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Przemek%20Buzdygan-0A66C2?logo=linkedin&style=flat&logoColor=white)](https://www.linkedin.com)  
-[![Email](https://img.shields.io/badge/Email-hello%40pbuzdygan.email-D14836?logo=gmail&style=flat&logoColor=white)](mailto:hello@pbuzdygan.email)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Przemek%20Buzdygan-0A66C2?logo=linkedin&style=flat&logoColor=white)](https://www.linkedin.com/in/przemys%C5%82aw-buzdygan-15bb391a)  
+[![Email](https://img.shields.io/badge/Email-hello%40pbuzdygan.email-D14836?logo=gmail&style=flat&logoColor=white)](mailto:pbuzdygan@outlook.com)  
 [![GitHub](https://img.shields.io/badge/GitHub-pbuzdygan-181717?logo=github&style=flat&logoColor=white)](https://github.com/pbuzdygan)
-
----
-
-## 📬 Reach Out
-
-I’m always open to collaboration, community discussion, and new challenges.  
-Let’s build something solid — with clarity and purpose.
 
 ---
 
